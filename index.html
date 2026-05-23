@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alora - Yogur Artesanal Premium</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <nav>
+      <div class="brand-group">
+        <div class="logo-container">
+          <div class="logo-img-box">
+            <img src="imagenes/loga.png" alt="Logo Alora" class="main-logo-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-menu-container">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#elaboracion">Elaboración</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nuestroequipo">Nuestro Equipo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <button id="cartBtn">🛒 <span id="cart-count">0</span></button>
+      </div>
+    </nav>
+
+    <div class="hero-content" id="inicio">
+      <h2>Capricho Lácteo</h2>
+      <p>Tú cuerpo lo pide, Alora lo tiene</p>
+      <p class="sello-descripcion">
+        Yogures artesanales elaborados con leche entera pasteurizada y frutas de nuestra biodiversidad regional. 
+        Bajos en azúcar, sin aditivos artificiales. El dulzor proviene de la fructosa natural de la fruta.
+      </p>
+      <button id="selloHeroBtn" class="add-cart">Conoce Nuestro Sello</button>
+    </div>
+  </header>
+
+  <section class="bienvenida-section">
+    <div class="bienvenida-container">
+      <h2 class="bienvenida-title">Popayán, la Ciudad Blanca</h2>
+      
+      <div class="bienvenida-img-container">
+        <img src="imagenes/catedral.jpeg" alt="Majestuosa Popayán, Ciudad Blanca">
+      </div>
+      
+      <p>Bienvenidos a Popayán, la majestuosa "Ciudad Blanca" de Colombia. Caminar por sus calles es recorrer la historia viva entre fachadas coloniales que resplandecen bajo el sol y templos que resguardan siglos de arte y devoción. Reconocida globalmente por sus procesiones de Semana Santa —declaradas Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO—, nuestra ciudad es un epicentro donde la fe, la tradición y la identidad colectiva se visten de gala cada año.</p>
+      
+      <p>La riqueza de Popayán trasciende su arquitectura y sus ritos. Fuimos la primera ciudad de Latinoamérica en ser designada como Ciudad de la Gastronomía por la UNESCO, un honor que celebra nuestros saberes culinarios ancestrales, la mística de nuestras cocinas tradicionales y el uso respetuoso de la biodiversidad local.</p>
+      
+      <p>Es de este suelo fértil, de esta historia culinaria sin igual y del orgullo de nuestra gente de donde nace Alora. No solo elaboramos lácteos artesanales; embotellamos la esencia de nuestra tierra. Fusionamos la rigurosidad técnica con las mermeladas de frutas nativas y semillas que narran la biodiversidad del Cauca. Al elegir un Capricho Lácteo, no solo te nutres de forma consciente; te conectas con el legado, el misticismo y el sabor inconfundible de una joya mundial llamada Popayán, la Ciudad Blanca.</p>
+    </div>
+  </section>
+
+  <div id="selloModal" class="sello-modal hidden">
+    <div class="sello-modal-content">
+      <button id="closeSelloModalBtn" class="close-sello-btn">✕</button>
+      
+      <h2 class="sello-modal-main-title">Identidad y Sostenibilidad</h2>
+      <p class="sello-modal-subtitle">Los pilares que dan vida a Alora</p>
+      
+      <div class="sello-columns-container">
+        <div class="sello-info-block">
+          <div class="sello-block-header">
+            <div class="sello-emoji-container">🏛️</div>
+            <h3>Orgullo Payanés y Sello Local</h3>
+          </div>
+          <p>Nuestra marca Alora lleva el orgullo payanés en su esencia a través de un Sello Local que se manifiesta en cada uno de nuestros empaques narrativos. Nuestras etiquetas están profundamente inspiradas en la arquitectura colonial de la Ciudad Blanca, rindiendo un tributo visual a monumentos icónicos como el Puente del Humilladero. Al elegir Alora, no solo adquieres un producto saludable, sino que te sumerges en una experiencia que narra la historia y el alma de Popayán, utilizando códigos QR como un puente interactivo para descubrir la riqueza de nuestra biodiversidad y cultura regional.</p>
+        </div>
+
+        <div class="sello-info-block">
+          <div class="sello-block-header">
+            <div class="sello-emoji-container">🌱</div>
+            <h3>Compromiso Ambiental Consciente</h3>
+          </div>
+          <p>En Alora, nuestro compromiso ambiental nace de una convicción simple: nutrir tu cuerpo mientras cuidamos el planeta. Por eso, trabajamos bajo un modelo de producción sobre pedido que nos permite aprovechar de manera responsable los ingredientes de nuestra biodiversidad, evitando el desperdicio de materias primas perecederas y garantizando que cada yogur conserve una frescura auténticamente artesanal.</p>
+          <p>Además, estamos en constante búsqueda de empaques biodegradables que reemplacen los plásticos convencionales, para que cada elección de bienestar también sea una acción consciente en favor del medio ambiente. Porque en Alora, creemos que disfrutar de un producto saludable también significa respetar y proteger el mundo que nos rodea.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="about-section" id="nosotros">
+    <div id="aboutMainView">
+      <h2 class="about-main-title">La Tradición Láctea de Alora</h2>
+      <p class="about-subtitle">Donde la calidad y el sabor se encuentran.</p>
+
+      <div class="about-grid">
+        <div class="about-card" onclick="openAboutDetail('origenes')">
+          <div class="about-card-img">
+            <img src="imagenes/nuestro-origenes.jpg" alt="Nuestros Orígenes">
+          </div>
+          <div class="about-card-footer">
+            <h3>Nuestros Orígenes</h3>
+          </div>
+        </div>
+
+        <div class="about-card" onclick="openAboutDetail('innovacion')">
+          <div class="about-card-img">
+            <img src="imagenes/inovacion.jpg" alt="Innovación y Sabor">
+          </div>
+          <div class="about-card-footer">
+            <h3>Innovación y Sabor</h3>
+          </div>
+        </div>
+
+        <div class="about-card" onclick="openAboutDetail('compromiso')">
+          <div class="about-card-img">
+            <img src="imagenes/merca.jpg" alt="Compromiso con la Calidad">
+          </div>
+          <div class="about-card-footer">
+            <h3>Compromiso con la Calidad</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="aboutDetailView" class="about-detail-container hidden">
+      <button class="back-about-btn" onclick="closeAboutDetail()">← Volver</button>
+      
+      <div class="about-detail-content">
+        <div class="about-detail-img-box">
+          <img id="aboutDetailImg" src="" alt="Detalle Nosotros">
+        </div>
+        <div class="about-detail-text-box">
+          <h2 id="aboutDetailTitle">Título Detalle</h2>
+          <p id="aboutDetailDescription">Descripción extendida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section" id="elaboracion">
+    <h2 class="process-main-title">Del Campo a <span class="highlight">tu Mesa</span></h2>
+    <p class="process-subtitle">Nuestro proceso artesanal garantiza la máxima calidad y frescura en cada producto. Transparencia total desde la selección hasta el empaque.</p>
+
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-icon-container">
+          <span class="process-icon">🌱</span>
+        </div>
+        <span class="step-label">Paso 1</span>
+        <h3>Selección de Insumos</h3>
+        <p>Solo utilizamos leche entera pasteurizada y frutas frescas de nuestra biodiversidad nacional.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-icon-container">
+          <span class="process-icon">🥄</span>
+        </div>
+        <span class="step-label">Paso 2</span>
+        <h3>Preparación Artesanal</h3>
+        <p>Elaboramos nuestras propias mermeladas de aguacate, chontaduro y cereza, además de hidratar las semillas de chía.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-icon-container">
+          <span class="process-icon">🔬</span>
+        </div>
+        <span class="step-label">Paso 3</span>
+        <h3>Transformación Térmica</h3>
+        <p>Pasteurización controlada a 45°C para eliminar microorganismos y preparar la estructura de la leche.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-icon-container">
+          <span class="process-icon">⏰</span>
+        </div>
+        <span class="step-label">Paso 4</span>
+        <h3>Fermentación Láctea</h3>
+        <p>Inoculamos cultivos lácticos y dejamos reposar el yogur hasta obtener su textura cremosa y nutritiva.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-icon-container">
+          <span class="process-icon">📦</span>
+        </div>
+        <span class="step-label">Paso 5</span>
+        <h3>Mezclado y Empaque</h3>
+        <p>Integramos el yogur con las mermeladas artesanales y envasamos en presentaciones de 7 oz y 1 litro.</p>
+      </div>
+    </div>
+
+    <div class="features-bar">
+      <div class="feature-item">
+        <span class="feature-emoji">🥛</span>
+        <div class="feature-text">
+          <strong>Leche Entera</strong>
+          <p>Pasteurizada</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-emoji">🍎</span>
+        <div class="feature-text">
+          <strong>Frutas Frescas</strong>
+          <p>Biodiversidad nacional</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-emoji">🔬</span>
+        <div class="feature-text">
+          <strong>Fermentación</strong>
+          <p>Cultivos lácticos naturales</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-emoji">📦</span>
+        <div class="feature-text">
+          <strong>Producción</strong>
+          <p>Sobre pedido</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="products-section" id="productos">
+    <h2 class="section-title">Nuestros Productos</h2>
+    
+    <div class="products-grid">
+      <div class="product-card" data-name="Yogur de Aguacate">
+        <div class="img-placeholder">
+          <span class="badge-card">Salud Cardiovascular</span>
+          <img src="imagenes/aguacate.jpg" alt="Yogurt de Aguacate">
+        </div>
+        <h3>Yogur de Aguacate</h3>
+        <p class="product-description">Delicioso yogur artesanal con aguacate fresco, elaborado con mermelada casera de aguacate.</p>
+        <ul class="benefits-list">
+          <li>✓ Contiene grasas saludables que protegen tu corazón</li>
+          <li>✓ Rico en potasio para el funcionamiento muscular</li>
+          <li>✓ Aporta fibra para mejorar la digestión</li>
+        </ul>
+        <select class="size-select">
+          <option value="4500">Personal - $4.500</option>
+          <option value="14000">Litro - $14.000</option>
+        </select>
+        <div class="price">$4.500</div>
+        <button class="btn-add-to-cart">➕ Agregar al Carrito</button>
+      </div>
+
+      <div class="product-card" data-name="Yogur de Chontaduro">
+        <div class="img-placeholder">
+          <span class="badge-card">Energía Natural</span>
+          <img src="imagenes/chontaduro.jpg" alt="Yogurt de Chontaduro">
+        </div>
+        <h3>Yogur de Chontaduro</h3>
+        <p class="product-description">Yogur natural con chontaduro, fruta tropical de la biodiversidad payanesa.</p>
+        <ul class="benefits-list">
+          <li>✓ Potente energizante natural</li>
+          <li>✓ Rico en Vitamina A para salud de vista y piel</li>
+          <li>✓ Alto contenido de fibra que favorece la digestión</li>
+        </ul>
+        <select class="size-select">
+          <option value="4500">Personal - $4.500</option>
+          <option value="14000">Litro - $14.000</option>
+        </select>
+        <div class="price">$4.500</div>
+        <button class="btn-add-to-cart">➕ Agregar al Carrito</button>
+      </div>
+
+      <div class="product-card" data-name="Yogur de Cereza">
+        <div class="img-placeholder">
+          <span class="badge-card">Defensas y Descanso</span>
+          <img src="imagenes/cereza.jpeg" alt="Yogurt de Cereza">
+        </div>
+        <h3>Yogur de Cereza</h3>
+        <p class="product-description">Yogur artesanal con cerezas frescas, perfecto para cuidar tu salud.</p>
+        <ul class="benefits-list">
+          <li>✓ Rico en antioxidantes y Vitamina C</li>
+          <li>✓ Fortalece tus defensas naturales</li>
+          <li>✓ Protege las células del daño oxidativo</li>
+        </ul>
+        <select class="size-select">
+          <option value="4500">Personal - $4.500</option>
+          <option value="14000">Litro - $14.000</option>
+        </select>
+        <div class="price">$4.500</div>
+        <button class="btn-add-to-cart">➕ Agregar al Carrito</button>
+      </div>
+
+      <div class="product-card" data-name="Yogur de Chía">
+        <div class="img-placeholder">
+          <span class="badge-card">Bienestar Integral</span>
+          <img src="imagenes/chia.jpg" alt="Yogurt de Chía">
+        </div>
+        <h3>Yogur de Chía</h3>
+        <p class="product-description">Yogur natural con semillas de chía hidratadas, fuente de bienestar integral.</p>
+        <ul class="benefits-list">
+          <li>✓ Aporta Omega 3 para la salud del corazón</li>
+          <li>✓ Contiene proteína vegetal</li>
+          <li>✓ Mantiene niveles de energía estables</li>
+        </ul>
+        <select class="size-select">
+          <option value="4500">Personal - $4.500</option>
+          <option value="14000">Litro - $14.000</option>
+        </select>
+        <div class="price">$4.500</div>
+        <button class="btn-add-to-cart">➕ Agregar al Carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="equipo-section" id="nuestroequipo">
+    <div class="equipo-container">
+      <h2 class="equipo-title">Nuestro Equipo</h2>
+      <p class="equipo-subtitle">Las mentes y manos artesanales detrás de cada Capricho Lácteo.</p>
+
+      <div class="equipo-grid">
+        <div class="equipo-card">
+          <div class="equipo-avatar-box" style="border-radius: 50%; overflow: hidden; padding: 0;">
+            <img src="imagenes/natalia.jpeg" alt="Gerente General" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3>Anyi Natalia Pérez</h3>
+          <span class="equipo-puesto gerente">Gerente General</span>
+          <p class="equipo-rol-desc">Responsable del liderazgo estratégico, legal y de la coordinación general de todas las áreas de la empresa.</p>
+        </div>
+
+        <div class="equipo-card">
+          <div class="equipo-avatar-box" style="border-radius: 50%; overflow: hidden; padding: 0;">
+            <img src="imagenes/jurani.jpeg" alt="Jefa de Production" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3>Jurani Andrea Simales</h3>
+          <span class="equipo-puesto">Directora de Producción y Calidad</span>
+          <p class="equipo-rol-desc">Encargada de la elaboración técnica, el control de calidad y asegurar los estándares nutricionales del yogur.</p>
+        </div>
+
+        <div class="equipo-card">
+          <div class="equipo-avatar-box" style="border-radius: 50%; overflow: hidden; padding: 0;">
+            <img src="imagenes/daniela.jpeg" alt="Coordinadora de Productos" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3>Daniela Valentina Suarez</h3>
+          <span class="equipo-puesto">Directora Administrativa y Financiera:</span>
+          <p class="equipo-rol-desc">Responsable de la viabilidad económica, el manejo de presupuestos, costos y la relación con proveedores.</p>
+        </div>
+
+        <div class="equipo-card">
+          <div class="equipo-avatar-box" style="border-radius: 50%; overflow: hidden; padding: 0;">
+            <img src="imagenes/hary.jpeg" alt="Especialista en Marketing" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <h3>Hary Liliana Hoyos</h3>
+          <span class="equipo-puesto">Directora Comercial y Marketing:</span>
+          <p class="equipo-rol-desc">Líder de la identidad de marca, las ventas en canales digitales y la logística de distribución.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto-section" id="contacto">
+    <div class="contacto-container">
+      <h2 class="contacto-title">Contacto & Pedidos</h2>
+      <p class="contacto-subtitle">¿Quieres disfrutar de Alora? Escríbenos o visítanos en nuestras redes sociales.</p>
+
+      <div class="contacto-grid">
+        <div class="contacto-info-box">
+          <h3>Medios de Contacto</h3>
+          
+          <div class="contacto-item">
+            <span class="contacto-icon">📞</span>
+            <div class="contacto-text">
+              <strong>Teléfonos:</strong>
+              <p>+57 312 620 6584</p>
+              <p>+57 313 756 5126</p>
+              <p>+57 324 858 8280</p>
+              <p>+57 324 587 5783</p>
+            </div>
+          </div>
+
+          <div class="contacto-item">
+            <span class="contacto-icon">📩</span>
+            <div class="contacto-text">
+              <strong>Correo Electrónico:</strong>
+              <p>capricholacteo@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contacto-item">
+            <span class="contacto-icon">📸</span>
+            <div class="contacto-text">
+              <strong>Síguenos en Instagram:</strong>
+              <p><a href="https://www.instagram.com/capricholacteo?igsh=MW9hYnZld2lsd2Zndg==" target="_blank">@alora.co</a></p>
+            </div>
+          </div>
+
+          <div class="contacto-item">
+            <span class="contacto-icon">⏰</span>
+            <div class="contacto-text">
+              <strong>Horario de Atención:</strong>
+              <p>Lunes a Sábado: 8:00 AM - 6:00 PM</p>
+              <p>Producción sobre pedido para garantizar frescura.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacto-productos-box">
+          <h3>Nuestra Línea de Productos</h3>
+          <p class="productos-intro-text">Elaboramos yogures artesanales premium con frutas e insumos de la más alta calidad:</p>
+          
+          <ul class="lista-productos-contacto">
+            <li><strong>🥑 Yogur de Aguacate:</strong> Fuente de grasas saludables y bienestar cardiovascular.</li>
+            <li><strong>🟠 Yogur de Chontaduro:</strong> Energía natural con el auténtico sabor tropical de nuestra región.</li>
+            <li><strong>🍒 Yogur de Cereza:</strong> Delicioso antioxidante natural para fortalecer tus defensas.</li>
+            <li><strong>🌱 Yogur con Semillas de Chía:</strong> Alto en Omega-3 y proteína vegetal para un bienestar integral.</li>
+          </ul>
+
+          <a href="https://wa.me/573233493940?text=%C2%A1Hola%20Alora%21%20%20Me%20gustar%C3%ADa%20hacer%20un%20pedido%20de%20Caprichos%20L%C3%A1cteos.%20%C2%BFMe%20podr%C3%ADan%20compartir%20los%20sabores%20disponibles%20y%20los%20precios%3F%20" 
+              class="btn-whatsapp-contacto" 
+              target="_blank">
+              Pedir por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="cartPanel" class="cart-panel">
+    <div class="cart-panel-header">
+      <h2>Tu Carrito</h2>
+      <button id="closeCartPanelBtn" class="close-panel-btn">✕</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-total-container">
+      <h3>Total: <span>$</span><span id="total">0</span></h3>
+      <button id="checkoutBtn">Proceder al pago</button>
+    </div>
+  </div>
+
+  <div id="voucherModal" class="voucher-modal hidden">
+    <div id="voucherContent" class="voucher-content"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
